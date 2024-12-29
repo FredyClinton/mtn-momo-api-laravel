@@ -23,14 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Crée un lien qui permettre au clients
 
-//recuperer la liste des posts
-Route::get('/posts', [PostController::class, 'index']);
-
-Route::post('posts/create', [PostController::class, 'store']);
-Route::put('posts/edit/{id}',  [PostController::class, 'update']);
-
-Route::delete('posts/{post}',  [PostController::class, 'delete']);
-
-Route::post('/register', [UserController::class, 'register']);
+// route pour effectuer un paiement
 
 Route::post('/mtn-momo/paiement', [MtnMomoController::class, 'requestToPay']);
